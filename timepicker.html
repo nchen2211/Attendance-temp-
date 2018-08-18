@@ -1,0 +1,31 @@
+!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <title>ELC Treasure Hunt: Student</title>
+    <meta name="description" content="USC Experiential Learning Center Attendance">
+    <link rel="stylesheet" href="jquery-timepicker/jquery.timepicker.css">
+</head>
+
+<body >
+	
+	<div id="select_time">
+		<button type="button"> Select time </button>
+		<!-- <p id="time"></p> -->
+	</div>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	  <!-- to include time picker -->
+
+	<script src="jquery-timepicker/jquery.timepicker.min.js"></script>
+
+	<script>
+	$(document).ready(function() {
+	  		$('#select_time').timepicker({ 'scrollDefault': 'now' });
+	  		$('#select_time').on('changeTime', function() {
+	  			console.log($(this).val());
+    			$('#time').val($(this).val());
+			});
+	  	});
+	</script>
